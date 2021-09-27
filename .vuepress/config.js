@@ -1,5 +1,5 @@
 module.exports = {
-  base: "/data-management-2021-notes/",
+  base: "/advanced-database-systems-2021/",
   dest: "docs",
   themeConfig: {
     displayAllHeaders: true,
