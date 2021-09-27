@@ -11,15 +11,17 @@ Along the way, we will be exploring the following technologies:
 
 ## Weekly Session Schedule
 
-| 1 | Introduction to NodeJS and MongoDB |
-|2 | Exploring Node And Express and Templates |
-| 3 | No Sql data planning and Modelling |
-| 4 | Completing the MCV stack |
-| 5 | Assessment Workshop |
-| 6 | Thinking about How to Update our Data |
-| 7 | Data Modelling and Relationships |
-| 8 | User Authentication |
-| 9 | Deploying to a Serverless Infrastructure |
-| 10 | Further Mongo Relations and Dynamic JavaScript |
-| 11 | Unit Debrief & Assessment Support |
-| 12 | Unit Debrief & Assessment Support |
+|    |                                                 |
+| --- | ---------------------------------------------- |
+| 1   | Introduction to NodeJS and MongoDB             |
+| 2   | Exploring Node And Express and Templates       |
+| 3   | No Sql data planning and Modelling             |
+| 4   | Completing the MCV stack                       |
+| 5   | Assessment Workshop                            |
+| 6   | Thinking about How to Update our Data          |
+| 7   | Data Modelling and Relationships               |
+| 8   | User Authentication                            |
+| 9   | Deploying to a Serverless Infrastructure       |
+| 10  | Further Mongo Relations and Dynamic JavaScript |
+| 11  | Unit Debrief & Assessment Support              |
+| 12  | Unit Debrief & Assessment Support              |

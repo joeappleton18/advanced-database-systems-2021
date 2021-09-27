@@ -20,7 +20,7 @@ module.exports = {
       {
         title: "Week 1 - Introduction to NodeJS and MongoDB",
         collapsable: true,
-        children: ["/sessions/week_1/"],
+        children: ["sessions/week_1/lecture", "/sessions/week_1/"],
       },
 
       // {
