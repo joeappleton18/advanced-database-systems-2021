@@ -9,6 +9,7 @@ module.exports = {
         collapsable: true,
         children: [
           "/sessions/assessment_1_project with individual report_brief",
+          "/sessions/assessment_support",
         ],
       },
       {
