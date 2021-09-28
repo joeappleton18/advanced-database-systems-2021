@@ -2,7 +2,7 @@
 
 ## Relational Database
 
-In your first year, you were introduced to the concept of relational databases. In a relational database, data is stored tables. Conceptually, the data is stored much in the same way as a spreadsheet. For instance, a student table could something like this:
+In your first year, you were introduced to the concept of relational databases. In a relational database data is stored tables. Conceptually, the data is represented much in the same way as a spreadsheet. For instance, a student table could something like this:
 
 | #   | Student Name |
 | --- | ------------ |
@@ -30,7 +30,7 @@ As with their RDMS counterparts there are many different types of NoSQL database
 - Key-value stores
 - Graph-based
 
-To begin with, we are going to be looking at the document store, MongoDB.
+In this module, we are going to be looking at the document store, MongoDB.
 
 ## MongoDB
 
@@ -50,11 +50,7 @@ Instead of tables, data is stored in documents. Documents are constructed using 
 
 ## Setting up a development environment
 
-It is most convenient to configure a local development environment. This process should be simple, as we need minimal dependencies to get going, just NodeJS and MongoDB.
-
-## Installing MongoDB
-
-It is most convenient to configure a local development environment. This process should be simple, as we need minimal dependencies to get going, just NodeJS and MongoDB.
+It is most convenient to configure a local development environment. This process should be simple, as we need minimal dependencies to get going, just NodeJS and MongoDB. You will not be able to install MongoDB at University. However, you should certainly do this if you are using your own computer.
 
 **Mac Installation**
 
@@ -86,6 +82,29 @@ It is most convenient to configure a local development environment. This process
 - Assuming you did not change the defaults, create the directory 'C:\Program Files\MongoDB\Server\4.4\data\'
 - You can now start the server by clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongod.exe"
 - Next, clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe"" should bring up the shell
+
+**Setting up our Cloud Database (use this option to work from university)**
+
+Let's dive in and created a MongoDB Atlas account. This is a straight forward process:
+
+<img src="https://joeappleton18.github.io/data-management-2021-notes/images/set-up-a-atlas-account.png" />
+
+> > The first three steps in setting up a free Atlas Account.
+
+- [Register a new account](https://www.mongodb.com/cloud/atlas/register).
+- On the next screen, you'll get the opportunity to set up a new project, name it "dbwork" and select JavaScript as the language choice.
+- Select select a Free, shared, cluster.
+- Finally, choose an AWS cloud provider and click "Create Cluster"
+
+<img src="https://joeappleton18.github.io/data-management-2021-notes/images/configuring-your-cluster.png" />
+
+> > Configuring a cluster
+
+- Next, we need to follow through the steps to configure our database cluster
+
+  - Under database access, set up an admin user and password
+  - Under network access, allow access from all IPs
+  - Finally clusters, click connect to cluster, click connect using NodeJS and grab the connection string
 
 ## Installing NodeJS
 
@@ -151,41 +170,42 @@ Let's try and take things a little further and use node to manipulate a mongo da
 - Next, we need to install the official MongoDB Node.js driver within your `week_1` folder run the following command: `npm install mongodb --save`. Check your `package.json` file, you should see the mongo dependency in there.
 - Finally construct the program below and run `node sample_2.js`
 - Visit, in your browser, `http://localhost:8080`
-- After execution, if you open up the mongo command shell (see above) and run the following commands:
+- After execution. If you are working using a local instance of mongodb open up the mongo command shell (see above) and run the following commands:
   - `use student`
   - `db.students.find({})`
+- If you are running a cloud version, click on "databases (in the side bar) -> view and monitoring -> collections"
 - You should see a list of students in your database
 
 ```js
 const http = require("http");
 const server = http.createServer();
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
-const url = "mongodb://localhost:27017";
-const dbName = "student";
+// this will be something like "mongodb+srv://test:test@cluster0.x08wt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" if you used the cloud db, or "mongodb://localhost:27017" if you use a local install;
+const url = "your connection url";
+
+const dbName = "test";
 const client = new MongoClient(url, { useNewUrlParser: true });
+const students = [
+  {
+    name: { first: "joe", last: "appleton" },
+    dob: new Date("August 12, 1982"),
+  },
+  {
+    name: { first: "bill", last: "smith" },
+    dob: new Date("August 12, 1982"),
+  },
+];
 
 server.on("request", async (req, res) => {
-  const { url, headers } = req;
   try {
-    const students = [
-      {
-        name: { first: "joe", last: "appleton" },
-        dob: new Date("August 12, 1982"),
-      },
-      {
-        name: { first: "bill", last: "smith" },
-        dob: new Date("August 12, 1982"),
-      },
-    ];
     await client.connect();
     const db = client.db(dbName);
     const collection = db.collection("students");
     await collection.insertMany(students);
     res.end("request ended");
   } catch (e) {
-    console.log(e);
-    res.end("could not update");
+    console.log(`could not update ${e}`);
   }
 });
 
@@ -204,7 +224,12 @@ Next, in the handler function, we are connecting to MongoDB and selecting the st
 
 Implement the above two samples for yourself. Type in the code, as you go along review the sections of the [node](https://nodejs.org/en/docs/) and [https://docs.mongodb.com/](https://docs.mongodb.com/) documentation that relate to the code that we are typing in.
 
-## Task 3 Making a Wine Tasting Database
+## Guided Learning
+
+- When you get home, set up a your own development environment.
+- [Can you play around with our student database and add some further operations](https://www.mongodb.com/developer/quickstart/node-crud-tutorial/)
+
+<!-- ## Task 3 Making a Wine Tasting Database
 
 - [Download](https://www.kaggle.com/zynicide/wine-reviews) this JSON file containing ~130k wine reviews
 - Place it in your week-1 directory
@@ -213,8 +238,8 @@ Implement the above two samples for yourself. Type in the code, as you go along 
 
 Use the following documentation to help you:
 
-[insertMany - to insert data ](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/)  
-[fsPromise to read the file](https://devdocs.io/node/fs#fs_fspromises_readfile_path_options)  
+[insertMany - to insert data ](https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/)
+[fsPromise to read the file](https://devdocs.io/node/fs#fs_fspromises_readfile_path_options)
 [JSON.parse to parse the file](https://devdocs.io/javascript/global_objects/json/parse)
 
 - Can you work out how to, after the records have inserted, log to the console the duration it took to insert the records and the number of records inserted
@@ -229,7 +254,7 @@ Use the following documentation to help you:
   from the wine db
 - Let's keep things very basic. Your app should have the following functionality
 - As a web users if I visit http://localhost:"your port"/country/italy I get a list of wine reviews from Italy in jason format
-- Consider setting up further routes to that further filter the data. Try and achieve this by not using any external node packages
+- Consider setting up further routes to that further filter the data. Try and achieve this by not using any external node packages -->
 
 ### Documentation
 

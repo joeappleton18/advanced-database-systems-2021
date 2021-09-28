@@ -1,6 +1,9 @@
 module.exports = {
   base: "/advanced-database-systems-2021/",
   dest: "docs",
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     displayAllHeaders: true,
     sidebar: [
