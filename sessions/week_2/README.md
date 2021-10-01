@@ -1,18 +1,19 @@
-
-# Week 2 (Exploring Node, Express and Templates)
+# Week 2 (Exploring Express and EJS Templates)
 
 :::tip
 This module is not about taking an in-depth exploration into developing web applications. Rather, I want to show you the basics to allow you to expose an interface for users to be able to interact with your database.
 ::::
 
+This week we are going to somewhat depart, at least temporarily, from looking specifically at databases and consider how we can serve HTML pages from a Node application. I appreciate this may seem a little odd; after all, this is a database unit.
 
+My rationale for taking the approach is a common technique in NoSql application development; that is to allow the intended user interactions with our application to guide the data model. In other words, we structure our data such that it is convenient for our future users. As such, this week we are going to laying out a sample application and consider how our users will interact with it.
 
+::: warning Weekly Outcomes
+By the end of this week, you should be able to answer the question:
 
+How might I create and serve an HTML interface for my data driven web applications?
 
-
-This week we are going to somewhat depart, at least temporarily, from looking specifically at databases and consider how we can serve web HTML pages from a Node application. I appreciate this may seem a little odd. After all, this is a database unit.
-
-My rationale for taking the approach is a common technique in  NoSql  application development; that is to allow the intended user interactions with our application to guide the data model. In other words, we structure our data such that it is convenient for our future users. As such, this week we are going to laying out a sample application and consider how our users will interact with it.
+:::
 
 ## Simplifying HTTP requests
 
@@ -56,6 +57,7 @@ The above example uses the express package to create a new web-server that liste
 
 - Next, type in the sample application into `index,js`
 - To run the application execute the following terminal command `npm run dev`.
+- **Extra,** can you extend the application to have a `/contact` and `/about` page.
 
 ## Serving HTML files
 
@@ -82,7 +84,7 @@ app.listen(port, () => {
 
 Above, we return an `index.html` file when a request is received to the root of our website (l.12).
 
-## Task 2 Resolving Static Assets
+## Task 2 Serving HTML Files
 
 - Within your week 2 folder create 2 or 3 html pages. Place an `h1` in each page that identifies the page, e.g. `<h1>Contact </h1>`. Work out how serve these pages. For instance, when we visit `http://locahost:3000/contact` contact.html should be rendered.
 - Can you work out what the `path.resolve(__dirname, "index.html")` outputs? See if you can log to the console its output.
@@ -106,7 +108,7 @@ Can you find and insert a picture of Rick Ashley into one of your HTML pages.
 
 ## EJS Templates
 
-While serving plain HTML files provides us with a means to present a website, we do not have much in the way of flexibility and sophistication. For instance, how do we inject data into our html pages. Furthermore, how can we sections of our html pages (e.g. the header and the footer). This is where templating languages can help us. We are going to explore one such language, [https://ejs.co/#about], in this class.
+While serving plain HTML files provides us with a means to present a website, we do not have much in the way of flexibility and sophistication. For instance, how do we inject data into our html pages? Furthermore, how can we reuse sections of our html pages (e.g. the header and the footer). This is where templating languages can help us. We are going to explore one such language, [https://ejs.co/#about], in this class.
 
 EJS is simple to use. First, we need to install it - `npm install ejs`. We can now tell express to render our html pages using ejs. Below is a full example.
 
@@ -155,7 +157,7 @@ Using EJS, we now have some dynamic capabilities within our HTML views. The firs
 
 ## Task 4 Developing The Pages For An Application
 
-We've reached the main task for this week. Over the next several weeks we are going to be making a wine tasting application. You will be familiar with the wine [tasting data set from last week](https://www.kaggle.com/zynicide/wine-reviews). It contains 130k tastings; however, interestingly there are only around 25 wine tasters.
+We've reached the main task for this week. Over the next several weeks we are going to be making a wine tasting application. It contains 130k tastings; however, interestingly there are only around 25 wine tasters!
 
 Your main task for this week is to further explore the dataset and mock up a 4 page website using ejs templates that could be used to present the wine data in a meaningful way. **Note**, at this point we are not processing any data. Rather, we are mocking up what the data could look like. [You can use my example site as a starting point](https://ssu-my.sharepoint.com/:u:/g/personal/joe_appleton_solent_ac_uk/EZL8OjP32PlArSd4JWv2bNQBYZh9uaV1wbGABTGn3rjrQQ?e=afqOKI). Notice how I am using Twitter Bootstrap to quickly generate a site. This is something you are more than welcome to do for your assessment. [You can read more about Bootstrap on the official site](https://getbootstrap.com/).
 

@@ -2,7 +2,7 @@ module.exports = {
   base: "/advanced-database-systems-2021/",
   dest: "docs",
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
   themeConfig: {
     displayAllHeaders: true,
@@ -27,11 +27,11 @@ module.exports = {
         children: ["sessions/week_1/lecture", "/sessions/week_1/"],
       },
 
-      // {
-      //     title: "Week 2 - Exploring Node, Express and Templates",
-      //     collapsable: true,
-      //     children: ["/sessions/week_2/"],
-      // },
+      {
+        title: "Week 2 - Exploring Node, Express and Templates",
+        collapsable: true,
+        children: ["/sessions/week_2/"],
+      },
       // {
       //     title: "Week 3 - MongoDB Queries",
       //     collapsable: true,
