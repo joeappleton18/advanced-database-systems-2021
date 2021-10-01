@@ -30,7 +30,7 @@ module.exports = {
       {
         title: "Week 2 - Exploring Node, Express and Templates",
         collapsable: true,
-        children: ["/sessions/week_2/"],
+        children: ["sessions/week_2/lecture", "/sessions/week_2/"],
       },
       // {
       //     title: "Week 3 - MongoDB Queries",
