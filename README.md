@@ -1,6 +1,6 @@
 # Course Overview
 
-Hello, and welcome to Data Management. I am very excited about this module, as rather than look at databases in isolation; we are going to be creating a fully-functional three-tiered web application.
+Hello, and welcome to Advanced Database Systems. I am very excited about this module, as rather than look at databases in isolation; we are going to be creating a fully-functional three-tiered web application.
 
 Along the way, we will be exploring the following technologies:
 
