@@ -4,23 +4,21 @@
 
 Last week we considered how we could use NodeJS and the packages Express and ejs to construct the view layer of a data driven application. This week we will be continuing our journey by moving on to explore, the powers of the MongoDB data model.
 
-To assist us in gaining a better understanding of the powers of MongoDB, we are going to revisit our wine tasting dataset from week one.
+[To assist us in gaining a better understanding of the powers of MongoDB, we are going to revisit our wine tasting dataset](https://www.kaggle.com/zynicide/wine-reviews).
 
-Those of you who completed all of the week one tasks would have observed some interesting properties of our wine data-set. First, there are around 20k tastings with no attributed taster. Second, although there are ~130k records, there are only ~20 wine tasters - they've been busy! Observations such as this can be helpful in determining the utility of a data set.
+For those of you that have explored this data set you would have observed some interesting properties. First, there are around 20k tastings with no attributed taster. Second, although there are ~130k records, there are only ~20 wine tasters - they've been busy! Observations such as this can be helpful in determining the utility of a data set.
 :::
 
 ### Task 0 - Windows Path Setting
 
-f you are using windows, now is a good time to add the MongoDB folder as an environment variable. Further to this, you should also install the MongoDB Tools.
+If you are using windows, now is a good time to add the MongoDB folder as an environment variable. Further to this, you should also install the MongoDB Tools.
 
 - [There is a good stack overflow answer that you can read here](https://stackoverflow.com/questions/31055637/getting-mongoimport-is-not-recognized-as-an-internal-or-external-command-ope)
 
 -  You will need to download [MongoDB Tools](https://www.mongodb.com/try/download/database-tools)
-  -   Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
+-   Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
 
-## Importing Data
-
-We've already looked at importing data into MongoDB programatically using node. However, you can also use the MongoDB importer to populate a collection.
+## Importing Data (Note, we can't do this on university computers)
 
 The mongoimport command line tool is distributed with MongoDB and allows us to import data into our local MongoDB instance. The command looks like this:
 

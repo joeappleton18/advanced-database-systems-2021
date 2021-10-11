@@ -32,6 +32,11 @@ module.exports = {
         collapsable: true,
         children: ["sessions/week_2/lecture", "/sessions/week_2/"],
       },
+      {
+        title: "Week 3 - No Sql data planning and Modelling",
+        collapsable: true,
+        children: ["sessions/week_3/lecture"],
+      },
       // {
       //     title: "Week 3 - MongoDB Queries",
       //     collapsable: true,
