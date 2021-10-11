@@ -6,8 +6,11 @@
   "scripts": {
     "deploy": "vuepress build && git add -A && git commit -m 'bot commit' && git push --force",
     "develop": "vuepress dev ."
-  }, 
+  },
   "devDependencies": {
     "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "mongodb": "^4.1.3"
   }
 }

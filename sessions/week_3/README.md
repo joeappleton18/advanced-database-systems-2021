@@ -18,7 +18,11 @@ If you are using windows, now is a good time to add the MongoDB folder as an env
 -  You will need to download [MongoDB Tools](https://www.mongodb.com/try/download/database-tools)
 -   Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
 
-## Importing Data (Note, we can't do this on university computers)
+<!-- ## Importing Data
+
+When it comes to importing data we have a few options here. 
+
+### The MongoDB command line importer
 
 The mongoimport command line tool is distributed with MongoDB and allows us to import data into our local MongoDB instance. The command looks like this:
 
@@ -26,15 +30,17 @@ The mongoimport command line tool is distributed with MongoDB and allows us to i
 ```js
 mongoimport --db=wine  --collection=tastings --file="wine.json" --jsonArray
 ```
-The above command is fairly self explanatory; however, it is worth noting, if the database, "wine", does not exist it will automatically be created for us. Furthermore, the --jsonArray flag is needed as the the wine.json file contains and array of JSON elements. Finally, notice how we have used a singular name for the database and a plural for the collection - this is a common naming convention.
+The above command is fairly self explanatory; however, it is worth noting, if the database, "wine", does not exist it will automatically be created for us. Furthermore, the --jsonArray flag is needed as the the wine.json file contains and array of JSON elements. Finally, notice how we have used a singular name for the database and a plural for the collection - this is a common naming convention. -->
 
-## Task 1 - MongoDB Data Importing
+## Task 1 - Setting Up our Sample Application
 
-- [Download the wine.json file and insert the data into a collection called "tastings" that lives in a database called "wine". You can grab the data by visiting this link and saving the page on your local computer](https://github.com/joeappleton18/advanced-databases-starter-project/raw/master/wine.json)
+For the rest of this unit, I will be providing you with a sample application which builds on our wine tasting dataset. I intend to ensure you are all starting with the same code base and will provide you with an up-to-date version the application each week. To get started this week:
 
-- If all has gone well you, should see a message along the lines of " 129971 document(s) imported successfully. 0 document(s) failed to import."
+- [Check the README.md instructions on the starter project to get started. This will tell you how to set everything up this week](https://github.com/joeappleton18/db-starter-project). 
 
-- While it is useful to directly import data using MongoDB, some people have had a few issues. [If you think the import process has taken too long then you can clone and use a data importer that I have created for you](https://github.com/joeappleton18/wine-data-importer). 
+- You'll notice you will need to seed the database and rename the ".env.example" file to ".env". Further to this, you will also need to run the database seeder.
+
+-  You should take a look at the seeder.js file and ensure you have an idea how it works. Using a small side utility to seed a database is common.
 
 ## Considering the Current Data Shape
 
