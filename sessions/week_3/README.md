@@ -1,6 +1,6 @@
 # Week 3 (MongoDB Queries)
 
-:::tip 
+:::tip
 
 Last week we considered how we could use NodeJS and the packages Express and ejs to construct the view layer of a data driven application. This week we will be continuing our journey by moving on to explore, the powers of the MongoDB data model.
 
@@ -15,12 +15,12 @@ If you are using windows, now is a good time to add the MongoDB folder as an env
 
 - [There is a good stack overflow answer that you can read here](https://stackoverflow.com/questions/31055637/getting-mongoimport-is-not-recognized-as-an-internal-or-external-command-ope)
 
--  You will need to download [MongoDB Tools](https://www.mongodb.com/try/download/database-tools)
--   Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
+- You will need to download [MongoDB Tools](https://www.mongodb.com/try/download/database-tools)
+- Extract the zip file and move the contents to `C:\Program Files\MongoDB\Server\4.4\bin\`
 
 <!-- ## Importing Data
 
-When it comes to importing data we have a few options here. 
+When it comes to importing data we have a few options here.
 
 ### The MongoDB command line importer
 
@@ -36,11 +36,11 @@ The above command is fairly self explanatory; however, it is worth noting, if th
 
 For the rest of this unit, I will be providing you with a sample application which builds on our wine tasting dataset. I intend to ensure you are all starting with the same code base and will provide you with an up-to-date version the application each week. To get started this week:
 
-- [Check the README.md instructions on the starter project to get started. This will tell you how to set everything up this week](https://github.com/joeappleton18/db-starter-project). 
+- [Check the README.md instructions on the starter project to get started. This will tell you how to set everything up this week](https://github.com/joeappleton18/db-starter-project).
 
 - You'll notice you will need to seed the database and rename the ".env.example" file to ".env". Further to this, you will also need to run the database seeder.
 
--  You should take a look at the seeder.js file and ensure you have an idea how it works. Using a small side utility to seed a database is common.
+- You should take a look at the seeder.js file and ensure you have an idea how it works. Using a small side utility to seed a database is common.
 
 ## Considering the Current Data Shape
 
@@ -69,11 +69,10 @@ Currently each document in our "tastings" collection looks, along the lines of, 
 
 ## Read
 
-To get you all started, let's explore some basic read operations that we might want to run on our collection. 
-
-
+To get you all started, let's explore some basic read operations that we might want to run on our collection.
 
 Access the MongoDB command line, and run the following:
+
 ```js
 use wine
 ```
@@ -119,7 +118,7 @@ Use the notes above, and the [MongoDB documentation](https://docs.mongodb.com/) 
 
   - List the results in descending order, so you can see the most expensive bottle of wine first.
 
-- How many wine records exist that originated from France or Italy, where the price is greater than 60? Can you use a `$or` and a `$and` together to achieve this.
+- How many wine records exist that originated from France or Italy, where the price is greater than 60?
 
 **Did you fly through these tasks! Here are some more advanced, optional, questions**
 
@@ -194,9 +193,8 @@ This, final task, starts off by getting you to perform simple update operations 
 }
 ```
 
-** Advanced Tasks **
+## Advanced Tasks
 
 - Can you figure out how to use the [aggregation pipeline](https://docs.mongodb.com/manual/reference/operator/aggregation/group/#pipe._S_group) to output the details of each wine taster (e.g. name, twitter handle and number of tastings) to a new collection called tasters - this will take a little bit of research.
 
 - Finally, continue to explore our data set and run some more advanced queries that will further clean the data
-
