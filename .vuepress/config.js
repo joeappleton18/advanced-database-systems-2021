@@ -35,12 +35,12 @@ module.exports = {
       {
         title: "Week 3 - No Sql data planning and Modelling",
         collapsable: true,
-        children: ["/sessions/week_3/", "sessions/week_3/lecture"],
+        children: ["sessions/week_3/lecture", "/sessions/week_3/"],
       },
       {
         title: "Week 4  - Completing the MVC stack",
         collapsable: true,
-        children: ["/sessions/week_4/", "/sessions/week_4/lecture"],
+        children: ["/sessions/week_4/lecture", "/sessions/week_4/"],
       },
 
       // {

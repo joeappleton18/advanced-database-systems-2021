@@ -11,7 +11,7 @@ Along the way, we will be exploring the following technologies:
 
 ## Weekly Session Schedule
 
-|    |                                                 |
+|     |                                                |
 | --- | ---------------------------------------------- |
 | 1   | Introduction to NodeJS and MongoDB             |
 | 2   | Exploring Node And Express and Templates       |
@@ -25,3 +25,8 @@ Along the way, we will be exploring the following technologies:
 | 10  | Further Mongo Relations and Dynamic JavaScript |
 | 11  | Unit Debrief & Assessment Support              |
 | 12  | Unit Debrief & Assessment Support              |
+
+## Notes
+
+[The current version of the notes can be found here.](https://joeappleton18.github.io/advanced-database-systems-2021/)
+)
