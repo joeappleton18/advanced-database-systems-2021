@@ -55,7 +55,7 @@ For the rest of this unit, I will be providing you with a sample application whi
 
 ![screen layout](/images/mongoose_node_structure.png)
 
->> An overview of Mongoose
+> > An overview of Mongoose
 
 According to [Mozilla](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose), there are two approaches to programatically interacting with databases. We can use a query language specific to our given database solution. Alternatively, we can turn to a Object Data Model ("ODM") or an Object Relational Model ("ORM"). ODM/ORMs abstract away from the underlying database and provide a simplified API. Further to this, they can extend the functionality provided by the native database.
 
@@ -217,6 +217,19 @@ app.get("/tasters/delete/:id", tasterController.delete);
 ```
 
 > > notice how we use . notation to access each function that we have defined in our controller. Moreover, you should also observe that we define ad `:id` wild card on our delete route. This gives our controller access to an `id` parameter. For instance, if we were to visit the route `localhost:<port>/tasters/delete/123` our id param would equal 123.
+
+::: warning important
+Ensure that you do not leave your old route in.
+
+```js
+app.get("/tasters", (req, res) => {
+  res.render("tasters");
+});
+```
+
+> > this function should be converted to your new route.
+
+:::
 
 You should now be able to visit tasters in your application. However, you'll notice that we are not currently using any of our taster data that we passed in, ejs has our backs here.
 
