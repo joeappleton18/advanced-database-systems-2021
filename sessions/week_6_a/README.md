@@ -14,11 +14,11 @@ You can clone the solution branch with the following terminal command:
 **It's up to you how you used the solutions. Some may want to check their attempt and compare. While others, may clone the solutions each week - starting a blank with a blank slate.** 
 
 
-:::
+:::tip introduction
 
 This week, we are going to complete CRUD operations. 
 
-Recall, [in week-4](https://social-annotations-development.web.app/week-4), we looked how to (R)ead and (D)elete data. This week, we will be completing the  CRUD acronym by looking at (U)pdate and (D)elete.
+Recall, [in week-4](https://social-annotations-development.web.app/week-4), we looked how to (R)ead and (D)elete data. This week, we will be completing the  CRUD acronym by looking at (U)pdate .
 
 We will be addressing the key question: 
 
