@@ -47,8 +47,7 @@ A database that supports ACID transactions will ensure that all of the above ope
 
 <br/>
 
-![screen layout](/images/sql-vs-no-sql-updates.png)
-
+<img src="https://joeappleton18.github.io/data-management-2021-notes/images/sql-vs-no-sql-updates.png" />
 
 > > Can you see how we can reduce the transactions on a simple account management section of an application
 
@@ -63,9 +62,9 @@ Keep, M. and Cabral, A. (2018). MongoDB 4 Update: Multi-Document ACID Transactio
 
 **Before your start**, ensure you have the latest version of our ongoing class project.
 
-![screen layout](/images/entire-html-request.png)
+<img src="https://joeappleton18.github.io/data-management-2021-notes/images/entire-html-request.png">
 
->> The classical MVC model in the context of browser communication. Notice how we facilitate updates through HTTP requests
+> > The classical MVC model in the context of browser communication. Notice how we facilitate updates through HTTP requests
 
 This week is very special, as we are going to complete the MVC stack. In doing so, you are going to be able to add and update wine tasters 🍷🏭. Updating/Adding, wine tastings is a little more involved and we will look at that next week.
 
