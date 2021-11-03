@@ -47,7 +47,8 @@ A database that supports ACID transactions will ensure that all of the above ope
 
 <br/>
 
-<img src="/images/sql-vs-no-sql-updates.png" />
+![screen layout](/images/sql-vs-no-sql-updates.png)
+
 
 > > Can you see how we can reduce the transactions on a simple account management section of an application
 
@@ -62,7 +63,7 @@ Keep, M. and Cabral, A. (2018). MongoDB 4 Update: Multi-Document ACID Transactio
 
 **Before your start**, ensure you have the latest version of our ongoing class project.
 
-<img src="/images/entire-html-request.png" />
+![screen layout](/images/entire-html-request.png)
 
 >> The classical MVC model in the context of browser communication. Notice how we facilitate updates through HTTP requests
 
