@@ -62,7 +62,7 @@ Keep, M. and Cabral, A. (2018). MongoDB 4 Update: Multi-Document ACID Transactio
 
 **Before your start**, ensure you have the latest version of our
 
-![](./entire-html-request.png)
+<img src="https://social-annotations-development.web.app/_next/static/images/html-request-d7644ef985588f298df7be8e82e0a739.png">
 
 > > The classical MVC model in the context of browser communication. Notice how we facilitate updates through HTTP requests
 
