@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "deploy": "vuepress build && git add -A && git commit -m 'bot commit' && git push --force",
-    "develop": "vuepress dev ."
+    "dev": "vuepress dev ."
   },
   "devDependencies": {
     "vuepress": "^1.8.2"
