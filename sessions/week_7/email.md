@@ -12,7 +12,7 @@ You'll learn, that non-relational does not mean no-relations, that would be very
 
 Further to the above, we will also look at how we can use MongoDB's aggregation pipeline to ask interesting questions of our data.
 
-Please ensure you watch the lecture before the practical.
+[Please ensure you watch the lecture before the practical.](https://joeappleton18.github.io/advanced-database-systems-2021/sessions/week_7/lecture.html)
 
 All the best,
 
