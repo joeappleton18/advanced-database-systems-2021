@@ -19,8 +19,6 @@ This week I want to focus the reading and discussion on a series of [blog articl
 
 :::
 
-
-
 This week promises to address, that perhaps nagging,  question: 
 
 **How can we construct relationships when working with non-relational databases?**
@@ -114,9 +112,6 @@ const log = logRef.populate('user_id')
 Zola, W. (2014). 6 Rules of Thumb for MongoDB Schema Design: Part 1 | MongoDB Blog. [online] MongoDB. Available at: https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design-part-1 [Accessed 14 Nov. 2020].
 
 
-
-
-
 ## Practical 
 
 This week we are going to explore how to construct and manage relationships by implementing the functionality to update and create wine tastings.
@@ -136,7 +131,7 @@ When creating/updating a wine tasting a few challenges arise. Let's consider som
 ```
 >> Variety, province, country and regions need to be consistent
 
-Variety, province, country and regions are all fields that we would like users to select with a drop down menu. It would not make sense for a user to type in these values. As such, we  need to maintain some collections that allow us to easily reference and update our common repeating fields on our tasters collection. In other words, we need to extend our seeder file, constructing a Varieties, Countries, Provinces , and Regions collection. 
+Variety, province, country and regions are all fields that we would like users to select with a drop down menu. It would not make sense for a user to type in these values. As such, we  need to maintain some collections that allow us to easily reference and update our common repeating fields on our tasters collection. In other words, we need to construct a `Varieties`, `Countries`, `Provinces`, and `Regions` collection. 
 
 We have two options available to us here:
 
@@ -148,13 +143,19 @@ We are going with the latter option. This presents a future challenge, as we wil
 
 ### A Quick Introduction to the Aggregation Pipeline
 
+:::warning a heads up
+
+The university computers do not have MongoDB installed. As such, you will need to
+use `query-runner.js` that comes with the DB starter project that you installed at the start of the session. To run the aggregation pipeline in the `query-runner` you need to append `.toArray()` to the end of the aggregation query.  
+
+:::
+
 According to the MongoDB team, ["MongoDB’s aggregation framework is modeled on the concept of data processing pipelines. Documents enter a multi-stage pipeline that transforms the documents into an aggregated result"](https://docs.mongodb.com/manual/aggregation/). Simple right! To understand this idea, let's consider how we might generate a list of provinces and output that list to a new collection called "provinces" - we can do all of this using aggregation:
 
 ```js
 db.tastings.aggregate([
   {$group: {_id: "$province"}},
   {$project: {name: "$_id", "_id" : 0}},
-
 ])
 ```
 >> An aggregation command to group our tastings collection by provinces 
