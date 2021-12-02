@@ -66,7 +66,7 @@ Keep, M. and Cabral, A. (2018). MongoDB 4 Update: Multi-Document ACID Transactio
 
 > > The classical MVC model in the context of browser communication. Notice how we facilitate updates through HTTP requests
 
-This week is very special, as we are going to complete the MVC stack. In doing so, you are going to be able to add and update wine tasters 🍷🏭. Updating/Adding, wine tastings is a little more involved and we will look at that next week.
+This week is very special, as we are going to complete the MVC stack. In doing so, you are going to be able to add and update wine tasters 🍷🏭.
 
 ## Handling a Form Post Request
 
@@ -74,7 +74,7 @@ In order to update our database, we need to allow users to enter data into our a
 
 The primary data transfer interface between the user and most web applications is, of course, a form. While there are many HTTP requests, a web form only facilitates two (GET and POST). [There are ways to, effectively, forward a POST request on to a different type of request (e.g. PUT)](https://github.com/expressjs/method-override). However, for our wine tasting application, this may be overkill.
 
-Consider the ejs file, `views/create-taster.ejs`, you'll see I've created a form for you. Notice the key properties that allow us to communicate with the server (method, action, name):
+Consider the ejs file, `views/create-taster.ejs`, you'll see I've created a form for you. Notice the key attributes that allow us to communicate with the server (`method`, `action`, `name`):
 
 ```html
 <form method="POST" action="/create-taster">
@@ -93,14 +93,17 @@ Consider the ejs file, `views/create-taster.ejs`, you'll see I've created a form
 
 > > views/update-taster.ejs
 
+<<<<<<< HEAD
 Above, when a user submits a form, we tell the browser to construct a post request, `method="POST"`. Send that request to our `currenturl/create-taster`, `action="/create-taster"`. Finally, we use the name attribute to bind the value of each input to a distinctive name for later server access, `name=joe`. Express makes it very simple to trigger a function when a POST request is sent to the server:
+=======
+Above, when a user submits a form, we tell the browser to construct a post request, `method="POST"`. Send that request to our `currenturl/create-taster`, `action="/create-taster"`. Finally, the browser uses the name attribute to bind the value of each input to a distinctive name for later server access (e.g, `name = joe`). Express makes it very simple to trigger a function when a POST request is sent to the server:
+>>>>>>> 9b496f919c531d053b74ad9034f6d8587ff67e9b
 
 ```javaScript
 
 app.post("/create-taster", tasterController.create);
 
 ```
-
 > > Express provides handlers for all http requests
 
 ## Task 1 - Implement the Create the Taster Route
@@ -118,7 +121,11 @@ exports.create = async (req, res) => {
 };
 ```
 
+<<<<<<< HEAD
 - Create a rout in `app.js` that passes our new function to a `post` request that is sent to `/create-taster`. If all has gone well, you should see the request logged to your console (the terminal window where you ran you application) when you submit the form. However, it does not look like there is any form data in there!?
+=======
+- Create a route in `app.js` that passes our new function to a post request that is sent to `/create-taster`. If all has gone well, you should see the request logged to your console (the terminal window where you ran you application) when you submit the form. However, it does not look like there is any form data in there!?
+>>>>>>> 9b496f919c531d053b74ad9034f6d8587ff67e9b
 
 - We need to add, what's know as middleware, to process our incoming HTTP requests and append the post data to these requests before they hit our controllers. We can use the, [body-parser](https://www.npmjs.com/package/body-parser#bodyparserrawoptions) package to achieve this.
 
@@ -141,7 +148,7 @@ exports.create = async (req, res) => {
 
 ## Creating a New Document Using Mongoose
 
-Let's move on to consider how we might create a new document using a Mongoose Model. We shall explore this idea through extending our `controllers/taster.js` create operation.
+We can now access incoming requests! Let's move on to consider how we might create a new document using a Mongoose Model. We shall explore this idea through extending our `controllers/taster.js` create operation.
 
 ```js
 exports.create = async (req, res) => {

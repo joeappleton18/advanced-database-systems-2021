@@ -44,39 +44,39 @@ module.exports = {
       },
 
       {
-          title: "Week 5 - Getting to Grips With the Assessment",
-          collapsable: true,
-          children: ["/sessions/week_5/"],
+        title: "Week 5 - Getting to Grips With the Assessment",
+        collapsable: true,
+        children: ["/sessions/week_5/"],
       },
 
       {
-          title: "Week 6 - Thinking About Updating Data",
-          collapsable: true,
-          children: ["/sessions/week_6_a/lecture","/sessions/week_6_a/"],
+        title: "Week 6 - Thinking About Updating Data",
+        collapsable: true,
+        children: ["/sessions/week_6_a/lecture", "/sessions/week_6_a/"],
       },
 
-      // {
-      //     title: "Week 7 - Data Modeling and Relationships",
-      //     collapsable: true,
-      //     children: ["/sessions/week_7/"],
-      // },
-      // {
-      //     title: "Week 8 - User Authentication",
-      //     collapsable: true,
-      //     children: ["/sessions/week_8/"],
-      // },
+      {
+        title: "Week 7 - Data Modeling and Relationships",
+        collapsable: true,
+        children: ["/sessions/week_7/lecture", "/sessions/week_7/"],
+      },
+      {
+        title: "Week 8 - User Authentication",
+        collapsable: true,
+        children: ["/sessions/week_8/lecture", "/sessions/week_8/"],
+      },
 
-      // {
-      //     title: "Week 9 - Deploying to a Serverless Infrastructure",
-      //     collapsable: true,
-      //     children: ["/sessions/week_9/"],
-      // },
+      {
+        title: "Week 9 - Deploying to a Serverless Infrastructure",
+        collapsable: true,
+        children: ["/sessions/week_9/lecture", "/sessions/week_9/"],
+      },
 
-      // {
-      //     title: "Week 10 - Further Mongo Relations and Dynamic JavaScript",
-      //     collapsable: true,
-      //     children: ["/sessions/week_10/"],
-      // },
+      {
+        title: "Week 10 - Further Mongo Relations and Dynamic JavaScript",
+        collapsable: true,
+        children: ["/sessions/week_10/lecture", "/sessions/week_10/"],
+      },
     ],
   },
 };
