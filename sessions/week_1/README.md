@@ -2,7 +2,7 @@
 
 ## Relational Database
 
-In your first year, you were introduced to the concept of relational databases. In a relational database data is stored tables. Conceptually, the data is represented much in the same way as a spreadsheet. For instance, a student table could something like this:
+In your first year, you were introduced to the concept of relational databases. In a relational database data is stored in tables. Conceptually, the data is represented in much the same way as a spreadsheet. For instance, a student table could look something like this:
 
 | #   | Student Name |
 | --- | ------------ |
@@ -18,7 +18,7 @@ In your first year, you were introduced to the concept of relational databases. 
 
 > > A simple database schema
 
-Relational database management systems (RDBMS), at the time of writing, are 50 years old. They present a very mature technology and are highly consistent. That is, any data written to the database is valid according to developer-defined constraints. In other words, an RDMS prioritises data integrity. We can conclude, if we are developing a system where data consistency and precision is vital then an RDBMS is the best choice. However, while an RDBMS will work for any application, managing schemas across multiple environments can be a, complex, time-consuming undertaking. Further to this, often data from several tables must be aggregated before it is suitable for a user facing view.
+Relational database management systems (RDBMS), at the time of writing, are 50 years old. They present a very mature technology and are highly consistent. That is, any data written to the database is valid according to developer-defined constraints. In other words, an RDMS prioritises data integrity. We can conclude, if we are developing a system where data consistency and precision is vital then an RDBMS is the best choice. However, while an RDBMS will work for any application, managing schemas across multiple environments can be a, complex, time-consuming undertaking. Further to this, data from several tables must often be aggregated before it is suitable for a user facing view.
 
 ## NoSQL Databases
 
@@ -81,11 +81,11 @@ It is most convenient to configure a local development environment. This process
   - Ensure that you install MONGO as a network service
 - Assuming you did not change the defaults, create the directory 'C:\Program Files\MongoDB\Server\4.4\data\'
 - You can now start the server by clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongod.exe"
-- Next, clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe"" should bring up the shell
+- Next, clicking "C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe" should bring up the shell
 
 **Setting up our Cloud Database (use this option to work from university)**
 
-Let's dive in and created a MongoDB Atlas account. This is a straight forward process:
+Let's dive in and create a MongoDB Atlas account. This is a straight forward process:
 
 <img src="https://joeappleton18.github.io/data-management-2021-notes/images/set-up-a-atlas-account.png" />
 
@@ -93,7 +93,7 @@ Let's dive in and created a MongoDB Atlas account. This is a straight forward pr
 
 - [Register a new account](https://www.mongodb.com/cloud/atlas/register).
 - On the next screen, you'll get the opportunity to set up a new project, name it "dbwork" and select JavaScript as the language choice.
-- Select select a Free, shared, cluster.
+- Select a Free, shared, cluster.
 - Finally, choose an AWS cloud provider and click "Create Cluster"
 
 <img src="https://joeappleton18.github.io/data-management-2021-notes/images/configuring-your-cluster.png" />
@@ -111,7 +111,7 @@ Let's dive in and created a MongoDB Atlas account. This is a straight forward pr
 - Node is simple to install, simply visit the [download](https://nodejs.org/en/download/)
 - Next, visit command line and run "node -v", you should seem something along the lines of "14.11.0"
 
-Here is hoping that went smoothly; if it did, we are now ready to proceed with our first node application.
+Here's to hoping that went smoothly; if it did, we are now ready to proceed with our first node application.
 
 ## Task 1
 
@@ -160,7 +160,7 @@ Do not worry if the code above seems somewhat alien to you; much of it may be ne
 
 To achieve this, we first must pull in Node’s http module (l.1). Next, we create a new server instance (line 2). Finally, we tell the server to listen for incoming requests on port 8080 (l.14).
 
-Then we set up an HTTP request handler (l.4). When an HTTP request is received the function, which is the second argument passed into server.on(), is fired. Two objects are passed into this handler `function (res, req)`. As you can see we can use these objects to inspect the type of request (l.7 - 8) and write a response to the client (l.11).
+Then we set up an HTTP request handler (l.4). When an HTTP request is received, the function, which is the second argument passed into server.on(), is fired. Two objects are passed into this handler `function (res, req)`. As you can see we can use these objects to inspect the type of request (l.7 - 8) and write a response to the client (l.11).
 
 ### Sample Application 2
 
@@ -216,13 +216,13 @@ Let's explore the above code.
 
 Firstly you can see that we set up a a variable to hold the connection url (l.5). The number after the colon is the port that database server is listening, 27017 it the default port.
 
-Notice how we pre-append the keyword async to our http handler function (l.9). For now, just appreciate that we need to do this so we can, at a later point in the function, use await (l.22 & l.25)
+Notice how we prepend the keyword async to our http handler function (l.9). For now, just appreciate that we need to do this so we can, at a later point in the function, use await (l.22 & l.25)
 
 Next, in the handler function, we are connecting to MongoDB and selecting the student database (l.23 - l.24). We then select the collection students and insert our students records in bulk (l.24 - l.25).
 
 ## Task 2 Implement the Sample Applications
 
-Implement the above two samples for yourself. Type in the code, as you go along review the sections of the [node](https://nodejs.org/en/docs/) and [https://docs.mongodb.com/](https://docs.mongodb.com/) documentation that relate to the code that we are typing in.
+Implement the above two samples for yourself. Type in the code, as you go along review the sections of the [node](https://nodejs.org/en/docs/) and [mongodb](https://docs.mongodb.com/) documentation that relate to the code we are typing in.
 
 ## Guided Learning
 
